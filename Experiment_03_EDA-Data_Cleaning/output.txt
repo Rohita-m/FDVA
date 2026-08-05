@@ -1,0 +1,69 @@
+Initial Data Overview:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 370 entries, 0 to 369
+Data columns (total 12 columns):
+ #   Column             Non-Null Count  Dtype  
+---  ------             --------------  -----  
+ 0   Loan_ID            370 non-null    object 
+ 1   Gender             352 non-null    object 
+ 2   Married            346 non-null    object 
+ 3   Dependents         359 non-null    object 
+ 4   Education          370 non-null    object 
+ 5   Self_Employed      348 non-null    object 
+ 6   ApplicantIncome    370 non-null    int64  
+ 7   CoapplicantIncome  370 non-null    int64  
+ 8   LoanAmount         369 non-null    float64
+ 9   Loan_Amount_Term   333 non-null    float64
+ 10  Credit_History     336 non-null    float64
+ 11  Property_Area      370 non-null    object 
+dtypes: float64(3), int64(2), object(7)
+memory usage: 34.8+ KB
+None
+
+Missing Values in Each Column:
+ Loan_ID               0
+Gender               18
+Married              24
+Dependents           11
+Education             0
+Self_Employed        22
+ApplicantIncome       0
+CoapplicantIncome     0
+LoanAmount            1
+Loan_Amount_Term     37
+Credit_History       34
+Property_Area         0
+dtype: int64
+Heatmap generated, but plt.show() skipped for non-interactive execution.
+
+Removed 3 duplicate rows.
+
+Cleaned Data Summary:
+<class 'pandas.core.frame.DataFrame'>
+Index: 367 entries, 0 to 366
+Data columns (total 12 columns):
+ #   Column             Non-Null Count  Dtype  
+---  ------             --------------  -----  
+ 0   Loan_ID            367 non-null    object 
+ 1   Gender             367 non-null    object 
+ 2   Married            367 non-null    object 
+ 3   Dependents         367 non-null    int64  
+ 4   Education          367 non-null    object 
+ 5   Self_Employed      367 non-null    object 
+ 6   ApplicantIncome    367 non-null    float64
+ 7   CoapplicantIncome  367 non-null    float64
+ 8   LoanAmount         367 non-null    float64
+ 9   Loan_Amount_Term   367 non-null    float64
+ 10  Credit_History     367 non-null    float64
+ 11  Property_Area      367 non-null    object 
+dtypes: float64(5), int64(1), object(6)
+memory usage: 37.3+ KB
+None
+    Loan_ID Gender Married  ...  Loan_Amount_Term Credit_History Property_Area
+0  LP001000   Male      No  ...             360.0       0.527964         Rural
+1  LP001001   Male     Yes  ...             360.0       0.527964         Urban
+2  LP001002   Male     Yes  ...             480.0       0.527964         Urban
+3  LP001003   Male     Yes  ...              12.0       0.527964         Urban
+4  LP001004   Male     Yes  ...             300.0      -1.894070         Urban
+
+[5 rows x 12 columns]
