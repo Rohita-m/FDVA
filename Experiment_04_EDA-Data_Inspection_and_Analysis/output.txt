@@ -1,0 +1,135 @@
+--- df.head() ---
+    Loan_ID Gender Married  ... Loan_Amount_Term Credit_History Property_Area
+0  LP001000   Male      No  ...            360.0            1.0         Rural
+1  LP001001    NaN     Yes  ...            360.0            1.0         Urban
+2  LP001002   Male     Yes  ...            480.0            1.0         Urban
+3  LP001003   Male     Yes  ...             12.0            1.0         Urban
+4  LP001004   Male     Yes  ...            300.0            0.0         Urban
+
+[5 rows x 12 columns]
+
+--- df.tail() ---
+      Loan_ID  Gender Married  ... Loan_Amount_Term Credit_History Property_Area
+362  LP001362    Male     Yes  ...             84.0            1.0         Urban
+363  LP001363    Male     Yes  ...            180.0            0.0     Semiurban
+364  LP001364  Female      No  ...             84.0            1.0         Rural
+365  LP001365    Male      No  ...            240.0            1.0         Urban
+366  LP001366     NaN     Yes  ...            180.0            1.0     Semiurban
+
+[5 rows x 12 columns]
+
+--- df.info() ---
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 367 entries, 0 to 366
+Data columns (total 12 columns):
+ #   Column             Non-Null Count  Dtype  
+---  ------             --------------  -----  
+ 0   Loan_ID            367 non-null    object 
+ 1   Gender             350 non-null    object 
+ 2   Married            343 non-null    object 
+ 3   Dependents         356 non-null    object 
+ 4   Education          367 non-null    object 
+ 5   Self_Employed      345 non-null    object 
+ 6   ApplicantIncome    367 non-null    int64  
+ 7   CoapplicantIncome  367 non-null    int64  
+ 8   LoanAmount         366 non-null    float64
+ 9   Loan_Amount_Term   330 non-null    float64
+ 10  Credit_History     333 non-null    float64
+ 11  Property_Area      367 non-null    object 
+dtypes: float64(3), int64(2), object(7)
+memory usage: 34.5+ KB
+None
+
+--- df.describe() ---
+       ApplicantIncome  CoapplicantIncome  ...  Loan_Amount_Term  Credit_History
+count       367.000000         367.000000  ...        330.000000      333.000000
+mean      38698.918256       19750.910082  ...        197.309091        0.759760
+std       23702.016502       11756.824989  ...        148.075173        0.427872
+min         312.000000         141.000000  ...         12.000000        0.000000
+25%       18235.000000        9478.000000  ...         60.000000        1.000000
+50%       36885.000000       18710.000000  ...        180.000000        1.000000
+75%       59498.500000       30101.000000  ...        300.000000        1.000000
+max       80947.000000       41945.000000  ...        480.000000        1.000000
+
+[8 rows x 5 columns]
+
+--- df.columns ---
+Index(['Loan_ID', 'Gender', 'Married', 'Dependents', 'Education',
+       'Self_Employed', 'ApplicantIncome', 'CoapplicantIncome', 'LoanAmount',
+       'Loan_Amount_Term', 'Credit_History', 'Property_Area'],
+      dtype='object')
+
+Unique values in 'Gender': ['Male' nan 'Female']
+
+Unique values in 'Married': ['No' 'Yes' nan]
+
+Unique values in 'Dependents': ['0' '3+' '2' '1' nan]
+
+Unique values in 'Education': ['Not Graduate' 'Graduate']
+
+Unique values in 'Self_Employed': ['Yes' 'No' nan]
+
+Unique values in 'Property_Area': ['Rural' 'Urban' 'Semiurban']
+
+Value counts in 'Dependents' after conversion:
+Dependents
+0       187
+1        73
+3        48
+2        48
+<NA>     11
+Name: count, dtype: Int64
+
+Statistics for 'ApplicantIncome':
+Mean: 38698.92
+Median: 36885.00
+Mode: [15529]
+Range: 80635.00
+Variance: 561785586.28
+Standard Deviation: 23702.02
+
+Statistics for 'CoapplicantIncome':
+Mean: 19750.91
+Median: 18710.00
+Mode: [  141   155   193   587   645   726   778  1089  1125  1141  1283  1492
+  1529  1875  1958  1998  2044  2261  2282  2307  2454  2591  2597  2659
+  2800  3112  3134  3267  3311  3321  3744  3760  3828  4033  4079  4088
+  4249  4378  4492  4493  4648  4658  4912  5075  5374  5410  5433  5463
+  5482  5808  5827  5889  5906  6031  6142  6317  6370  6416  6439  6450
+  6581  6588  6701  6716  6796  6816  6980  7156  7230  7368  7418  7446
+  7461  7851  8004  8179  8210  8259  8333  8438  8472  8770  8787  9031
+  9101  9122  9127  9168  9277  9342  9346  9428  9528  9587  9752  9794
+  9885 10058 10213 10233 10332 10412 10449 10487 10516 10651 10693 11002
+ 11093 11101 11172 11190 11205 11240 11381 11439 11639 11739 11777 12109
+ 12336 12466 12497 12576 12605 12743 12763 13074 13146 13230 13392 13395
+ 13467 13615 13654 13686 13749 13947 14140 14376 14567 14849 14868 15036
+ 15037 15114 15149 15223 15282 15434 15812 16018 16021 16087 16154 16232
+ 16288 16299 16390 16715 16724 16743 16789 16843 16977 17087 17154 17373
+ 17514 17543 17569 17709 17740 17761 17839 17858 17862 18019 18058 18099
+ 18230 18351 18626 18710 18888 18990 19086 19330 19539 19835 19900 20074
+ 20095 20215 20384 20389 20584 20961 20980 21125 21174 21180 21259 21312
+ 21386 21447 21778 21909 21953 22010 22054 22190 22207 22424 22432 22433
+ 22746 22760 22785 22967 23132 23172 23377 23383 23567 23852 23952 24000
+ 24173 24217 24264 24306 24364 24370 24765 24950 24995 25150 25188 25215
+ 25556 25634 25817 26167 26170 26475 26512 26515 26649 26819 26955 26957
+ 27005 27516 27840 27997 28011 28276 28365 28369 28669 28795 28803 28933
+ 28939 29009 29033 29075 29165 29304 29492 29516 29538 29808 30090 30112
+ 30119 30129 30373 30462 30483 30502 30519 30600 30795 30930 31259 31337
+ 31600 31655 31705 31852 32174 32220 32327 32402 32602 32698 32762 32808
+ 32994 33110 33154 33160 33209 33539 33623 33691 33703 33755 33866 34215
+ 34228 34285 34396 34518 34542 34587 34591 34610 34624 34775 34888 35292
+ 35426 35634 35820 36027 36116 36129 36268 36576 36598 36632 36636 36788
+ 37346 37383 37396 37418 37437 37465 37755 37822 38211 38244 38392 38429
+ 38547 39112 39332 39758 39832 39864 39901 39951 40197 40312 40486 40572
+ 40583 40603 40718 41689 41814 41855 41945]
+Range: 41804.00
+Variance: 138222933.81
+Standard Deviation: 11756.82
+
+Statistics for 'LoanAmount':
+Mean: 310.45
+Median: 303.00
+Mode: [351. 533.]
+Range: 590.00
+Variance: 34010.52
+Standard Deviation: 184.42
