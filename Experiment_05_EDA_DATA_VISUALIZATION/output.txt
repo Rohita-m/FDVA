@@ -1,0 +1,23 @@
+/Users/mukilan/FDVA/Experiment_05/EDA_DATA_VISUALIZATION.py:20: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+  plt.show()
+/Users/mukilan/FDVA/Experiment_05/EDA_DATA_VISUALIZATION.py:31: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+  plt.show()
+/Users/mukilan/FDVA/Experiment_05/EDA_DATA_VISUALIZATION.py:41: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+  plt.show()
+Data Head:
+  Make       Model  Year  ... city mpg  Popularity   MSRP
+0  BMW  1 Series M  2011  ...       19        3916  46135
+1  BMW    1 Series  2011  ...       19        3916  40650
+2  BMW    1 Series  2011  ...       20        3916  36350
+3  BMW    1 Series  2011  ...       18        3916  29450
+4  BMW    1 Series  2011  ...       18        3916  34500
+
+[5 rows x 16 columns]
+
+--- LINE CHART ---
+
+--- BAR CHART ---
+
+--- HISTOGRAM ---
+
+All visualizations generated successfully.
