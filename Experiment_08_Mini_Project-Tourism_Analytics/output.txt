@@ -1,0 +1,6 @@
+/Users/mukilan/FDVA/Experiment_08_Mini_Project-Tourism_Analytics/Mini_Project-Tourism_Analytics.py:28: FutureWarning: 
+
+Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
+
+  sns.boxplot(x='Season', y='Festival Impact Score', data=fest_impact, notch=True, ax=axes[1, 0], palette='Pastel1')
+Visualizations successfully saved to Tourism_Analytics_Dashboard.png
